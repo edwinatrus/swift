@@ -14,6 +14,7 @@
 		F21635441F09CB7D0017C614 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21635421F09CB7D0017C614 /* LaunchScreen.storyboard */; };
 		F216354C1F09CB9C0017C614 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F216354B1F09CB9C0017C614 /* FaceView.swift */; };
 		F24D267A1F09F9A600CAD922 /* FaceExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24D26791F09F9A600CAD922 /* FaceExpression.swift */; };
+		F2C5E0121F10CFDF00CD6E9D /* EmotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C5E0111F10CFDF00CD6E9D /* EmotionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F21635451F09CB7D0017C614 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F216354B1F09CB9C0017C614 /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
 		F24D26791F09F9A600CAD922 /* FaceExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceExpression.swift; sourceTree = "<group>"; };
+		F2C5E0111F10CFDF00CD6E9D /* EmotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				F216353B1F09CB7D0017C614 /* ViewController.swift */,
 				F216354B1F09CB9C0017C614 /* FaceView.swift */,
 				F216353D1F09CB7D0017C614 /* Main.storyboard */,
+				F2C5E0111F10CFDF00CD6E9D /* EmotionViewController.swift */,
 				F24D26791F09F9A600CAD922 /* FaceExpression.swift */,
 				F21635401F09CB7D0017C614 /* Assets.xcassets */,
 				F21635421F09CB7D0017C614 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2C5E0121F10CFDF00CD6E9D /* EmotionViewController.swift in Sources */,
 				F216353C1F09CB7D0017C614 /* ViewController.swift in Sources */,
 				F216353A1F09CB7D0017C614 /* AppDelegate.swift in Sources */,
 				F24D267A1F09F9A600CAD922 /* FaceExpression.swift in Sources */,
