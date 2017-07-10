@@ -35,7 +35,8 @@ class ViewController: UIViewController {
         }
     }
     
-    var expression = FacialExpression(eyes: .open, mouth: .grin) {
+    //var expression = FacialExpression(eyes: .open, mouth: .grin) {
+    var expression : FacialExpression! {
         didSet {
             updateUI()    // didSet does not trigger upon initialization
         }
@@ -71,13 +72,14 @@ class ViewController: UIViewController {
     }
     
     private func updateUI() {
-        switch expression.eyes {
-        case .open: faceView?.eyesOpen = true    // faceView might be nil upon initialization or segue prepare
-        case .closed: faceView?.eyesOpen = false    // faceView might be nil upon initialization or segue prepare
-        case .squiting: faceView?.eyesOpen = false    // faceView might be nil upon initialization or segue prepare
+        if expression != nil {
+            switch expression.eyes {
+            case .open: faceView?.eyesOpen = true    // faceView might be nil upon initialization or segue prepare
+            case .closed: faceView?.eyesOpen = false    // faceView might be nil upon initialization or segue prepare
+            case .squiting: faceView?.eyesOpen = false    // faceView might be nil upon initialization or segue prepare
+            }
+            faceView?.mouthCurvature = mouthCurvature[expression.mouth] ?? 0.0    // faceView might be nil upon initialization
         }
-        
-        faceView?.mouthCurvature = mouthCurvature[expression.mouth] ?? 0.0    // faceView might be nil upon initialization
     }
     
     private let mouthCurvature = [
@@ -109,7 +111,5 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 

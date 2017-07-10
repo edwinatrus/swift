@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EmotionViewController: UIViewController {
+class EmotionViewController: UIViewController, UISplitViewControllerDelegate {
     
     private let emotionFaces: Dictionary<String, FacialExpression> = [
         "angry": FacialExpression(eyes: .closed, mouth: .frown),
@@ -19,15 +19,19 @@ class EmotionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
     }
     
+    override func awakeFromNib() {
+        self.splitViewController?.delegate = self
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var destinationvc = segue.destination
@@ -44,6 +48,10 @@ class EmotionViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+        return true
     }
 
 }
